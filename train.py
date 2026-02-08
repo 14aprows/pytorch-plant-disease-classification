@@ -13,7 +13,7 @@ def main():
     y = df.iloc[:, -1].values
 
     scaler = StandardScaler()
-    X = scaler.fit_transform()
+    X = scaler.fit_transform(X)
 
     X_train, X_val, y_train, y_val = train_test_split(
         X, y, test_size=0.2, random_state=42

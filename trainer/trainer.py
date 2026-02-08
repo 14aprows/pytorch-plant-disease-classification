@@ -64,7 +64,7 @@ class Trainer:
     
     def fit(self, epochs=20):
         for epoch in range(1, epochs + 1):
-            train_loss = self.train.epoch(epoch)
+            train_loss = self.train_epoch(epoch)
             val_loss, val_acc, cm = self.validate(epoch)
 
             print(
